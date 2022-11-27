@@ -1,18 +1,16 @@
 from pathlib import Path
-
-
 import environ
+env = environ.Env()
+environ.Env.read_env()
 from django.urls import reverse_lazy
 
-env = environ.Env()
 # reading .env file
-environ.Env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY = environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -73,11 +71,11 @@ WSGI_APPLICATION = 'employee_management_sys.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': env("DATABASE_NAME"),
-        'USER': env("DATABASE_USER"),
-        'PASSWORD': env("DATABASE_PASSWORD"),
-        'HOST': env("DATABASE_HOST"),
-        'PORT': env("DATABASE_PORT"),
+        'NAME': environ.get("DATABASE_NAME"),
+        'USER': environ.get("DATABASE_USER"),
+        'PASSWORD': environ.get("DATABASE_PASSWORD"),
+        'HOST': environ.get("DATABASE_HOST"),
+        'PORT': environ.get("DATABASE_PORT"),
     }
 }
 

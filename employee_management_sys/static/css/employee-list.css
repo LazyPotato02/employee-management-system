@@ -1,0 +1,17 @@
+.employee-list{
+    border-color: black;
+    border-style: solid;
+    border-bottom-width: 1vm;
+    border-radius: 15px;
+    width: 22%;
+    text-align: center;
+    height: 22%;
+    margin: 10px ;
+    float: left;
+
+}
+.emp-not-found{
+    font-size: 100px;
+    text-align:center;
+
+}

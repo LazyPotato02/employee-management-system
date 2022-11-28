@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Employee Listing{% endblock %}
+{% block content %}
+    {% if employee_list %}
+        {% for employee in employee_list %}
+            <div class="employee-list">
+                <a href="{% url 'employee edit' pk=employee.pk %}"
+                   style="text-decoration: underline; color: black;font-size: 40px">
+                    {{ employee.first_name }} {{ employee.last_name }} </a>
+                {% if employee.cell %}
+                    <h1 style="color: green">{{ employee.cell }}</h1>
+                {% else %}
+                    <h1 style="color: red">Not Assigned</h1>
+                {% endif %}
+                <h1>{{ employee.emp_id }}</h1>
+            </div>
+        {% endfor %}
+    {% else  %}
+        <h1 class="emp-not-found">No employees found</h1>
+    {% endif %}
+{% endblock %}

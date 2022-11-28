@@ -1,39 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 
-.create_form {
-    /*border: 1px solid rgb(133, 236, 6);*/
-    background-color: lightgray;
+/*.create_form {*/
+/*    !*border: 1px solid rgb(133, 236, 6);*!*/
+/*    background-color: lightgray;*/
 
-    width: 750px;
-    border-radius: 20px;
-    font-size: 35px;
-    position: absolute;
+/*    width: 750px;*/
+/*    border-radius: 20px;*/
+/*    font-size: 35px;*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    transform: translate(-50%, -50%);*/
+/*}*/
+
+
+/*.create_form input {*/
+/*    margin-top: 5px;*/
+/*    margin-left: 10px;*/
+/*    !*border-color: #00E6F6;*!*/
+/*    border-radius: 20px;*/
+/*}*/
+
+/*.create_form button {*/
+/*    background-color: #1F6CAB;*/
+/*    margin-top: 15px;*/
+/*    width: 50%;*/
+/*    color: white;*/
+/*    margin-left: 25%;*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/*.create_form button:hover {*/
+/*    background-color: #115773;*/
+
+/*}*/
+
+.center-form-div {
+    position: fixed;
     top: 50%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-}
-
-
-.create_form input {
-    margin-top: 5px;
-    margin-left: 10px;
-    /*border-color: #00E6F6;*/
-    border-radius: 20px;
-}
-
-.create_form button {
-    background-color: #1F6CAB;
-    margin-top: 15px;
-    width: 50%;
-    color: white;
-    margin-left: 25%;
-    border-radius: 10px;
-}
-
-.create_form button:hover {
-    background-color: #115773;
+    width: 70%;
+    height: 70%;
 
 }
-
-

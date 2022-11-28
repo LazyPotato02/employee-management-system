@@ -53,3 +53,8 @@ class Employee(models.Model):
         unique=True,
         verbose_name='Employee Id'
     )
+
+    # def save(self, *args, **kwargs):
+    #     if self.cell == '':
+    #         self.cell = 'Not Assigned'
+    #     super(Employee, self).save(*args, **kwargs)

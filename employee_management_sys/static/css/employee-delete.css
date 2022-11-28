@@ -1,0 +1,23 @@
+.delete-profile {
+    top: 25%;
+    left: 15%;
+    position: absolute;
+}
+
+.delete-profile h1 {
+    font-size: 60px;
+    margin: 0 auto 20px;
+
+}
+
+.delete-profile button {
+    font-size: 50px;
+    display: block;
+    margin: 0 auto 20px;
+    width: 300px;
+}
+
+.delete-profile a {
+    text-decoration: none;
+
+}

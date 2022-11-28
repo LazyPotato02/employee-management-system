@@ -1,11 +1,13 @@
 from django.urls import path
 
-from employee_management_sys.employees.views import EmployeeCreateView
+from employee_management_sys.employees.views import EmployeeCreateView, EmployeeListView, EmployeeEditView, \
+    EmployeeDeleteView
 
 urlpatterns = [
-    # path('')
-    path('create/', EmployeeCreateView.as_view(), name='employee creation')
+    path('create/', EmployeeCreateView.as_view(), name='employee creation'),
+    path('list/', EmployeeListView.as_view(), name='employee list'),
+    path('edit/<int:pk>', EmployeeEditView.as_view(), name='employee edit'),
+    path('delete/<int:pk>', EmployeeDeleteView.as_view(), name='employee delete'),
 ]
 
 # TODO: Create SignUp for employees to track their month progression
-# TODO: Create employee/index for where all the employees are listed and buttons are shown for CRUD and manage them

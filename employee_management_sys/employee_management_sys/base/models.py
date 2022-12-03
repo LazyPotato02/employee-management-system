@@ -3,6 +3,8 @@ from django.db import models
 from django.contrib.auth import models as auth_models
 # Create your models here.
 from employee_management_sys.base.validators import validate_only_letters
+from employee_management_sys.cells.models import Cells
+from employee_management_sys.employees.models import Employee
 
 
 class EmployeeManager(auth_models.AbstractUser):

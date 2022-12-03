@@ -7,11 +7,7 @@
                 <a href="{% url 'employee edit' pk=employee.pk %}"
                    style="text-decoration: underline; color: black;font-size: 40px">
                     {{ employee.first_name }} {{ employee.last_name }} </a>
-                {% if employee.cell %}
-                    <h1 style="color: green">{{ employee.cell }}</h1>
-                {% else %}
-                    <h1 style="color: red">Not Assigned</h1>
-                {% endif %}
+                    <h1 style="color: green">{{ employee}}</h1>
                 <h1>{{ employee.emp_id }}</h1>
             </div>
         {% endfor %}

@@ -57,9 +57,8 @@
                             Cells
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Add</a></li>
-                            <li><a class="dropdown-item" href="#">Manage</a></li>
-                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cell creation' %}">Add</a></li>
+                            <li><a class="dropdown-item" href="{% url 'cell list' %}">List</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -76,7 +75,7 @@
     </div>
 </nav>
 {% block content %}
-    <h1>Home Page</h1>
+    <h1 style="text-align: center">Home Page</h1>
 {% endblock %}
 
 </body>

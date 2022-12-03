@@ -46,3 +46,7 @@
     height: 70%;
 
 }
+#id_cell {
+    width: 400px;
+    margin-left: 180px;
+}

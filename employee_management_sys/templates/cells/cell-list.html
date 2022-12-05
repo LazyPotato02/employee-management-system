@@ -4,12 +4,13 @@
     {% if cells_list %}
         {% for cell in cells_list %}
             <div class="employee-list">
-                <a href="{% url 'cell deletion' pk=cell.pk %}"
-                   style="text-decoration: underline; color: black;font-size: 40px">
+                <a href="{% url 'cell manage' pk=cell.pk %}"
+                   style="text-decoration: underline;font-size: 40px">
                     {{ cell.cell_name }} </a>
+                {% comment %}Delete/edit button for cell{% endcomment %}
             </div>
         {% endfor %}
-    {% else  %}
+    {% else %}
         <h1 class="emp-not-found">No cells found</h1>
     {% endif %}
 {% endblock %}

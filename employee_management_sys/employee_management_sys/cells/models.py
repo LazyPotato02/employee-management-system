@@ -10,4 +10,4 @@ class Cells(models.Model):
         return self.cell_name
 
     def __str__(self):
-        return str(self.cell_name)
+        return self.cell_name

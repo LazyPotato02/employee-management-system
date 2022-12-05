@@ -56,14 +56,16 @@ class Employee(models.Model):
         verbose_name='Employee Id'
     )
 
-    # def __repr__(self):
-    #     return str(self.cell)
-    #
+    def __repr__(self):
+        return str(self.cell.get())
+
     def __str__(self):
         # em_id = str(self.id)
         # cell_id = Cells.objects.get(id=self.id)
         # em_cell_str = Employee.objects.filter(id=10)
-        return str(self.cell.get())
+        return f"{self.first_name} {self.last_name} - {self.cell.get()}"
+
+        # return str(self.cell.get())
 
     # def save(self, *args, **kwargs):
     #     if self.cell == '':

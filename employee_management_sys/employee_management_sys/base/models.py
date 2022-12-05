@@ -18,7 +18,11 @@ class EmployeeManager(auth_models.AbstractUser):
         validators=(
             validators.MinLengthValidator(MIN_LEN_FIRST_NAME),
             validate_only_letters,
-        )
+        ),
+        null=True,
+        blank=True
+
+
     )
 
     last_name = models.CharField(
@@ -26,9 +30,12 @@ class EmployeeManager(auth_models.AbstractUser):
         validators=(
             validators.MinLengthValidator(MIN_LEN_LAST_NAME),
             validate_only_letters,
-        )
+        ),
+        null=True,
+        blank=True
     )
 
     email = models.EmailField(
         unique=True,
+        null=True,
     )

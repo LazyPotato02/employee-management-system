@@ -3,12 +3,22 @@
     border-style: solid;
     border-bottom-width: 1vm;
     border-radius: 15px;
-    width: 22%;
+    width: 30%;
     text-align: center;
     height: 22%;
     margin: 10px ;
     float: left;
 
+
+}
+.employee-lister-ul{
+    position: absolute;
+    left: 6%;
+}
+.employee-list a{
+    color: black;
+    text-decoration: underline;
+    font-size: 40px
 }
 .emp-not-found{
     font-size: 100px;

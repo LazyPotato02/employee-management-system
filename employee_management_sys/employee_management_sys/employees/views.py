@@ -24,13 +24,6 @@ class EmployeeListView(LoginRequiredMixin, views.ListView):
     model = Employee
     template_name = 'employees/employee-list.html'
 
-    # def get_context_data(self, **kwargs):
-    #     context = super().get_context_data(**kwargs)
-    #     for em in context['employee_list']:
-    #         # c = Cells.objects.filter(pk=em.id)
-    #         emp = Employee.objects.filter(id=em.id).get()
-    #         print(emp)
-    #     return context
 
 
 class EmployeeEditView(LoginRequiredMixin, views.UpdateView):

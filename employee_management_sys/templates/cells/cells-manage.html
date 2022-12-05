@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Employee Listing{% endblock %}
+{% block content %}
+    <div style="text-align: center;color: #6dd317">
+        <h1>{{ cells }}</h1>
+        {% if user.is_superuser %}
+
+            <a style="color: white" href="{% url 'cell edit' pk=cells.id %}">
+                <button class="btn btn-primary " style="font-size: 40px;color: white;width: 150px;margin: 10px">Edit
+                </button>
+            </a>
+        {% endif %}
+    </div>
+    {% if employee %}
+        <div class="cell-ul">
+            <ul>
+                {% for emp in employee %}
+                    <li>
+                        <div class="cell-list">
+                            <a href="{% url 'employee edit' pk=emp.id %}">{{ emp.first_name }} {{ emp.last_name }}</a>
+                            <h1 style="color: red"><b style="color: black">EMP ID:</b> {{ emp.emp_id }}</h1>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <h1 class="cell-not-found">No employees in the cell</h1>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,24 @@
+.cell-list {
+    border-color: black;
+    border-style: solid;
+    border-bottom-width: 1vm;
+    border-radius: 15px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.cell-ul ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cell-list a {
+    color: black;
+    font-size: 50px;
+}
+
+.cell-not-found {
+    font-size: 100px;
+    text-align: center;
+
+}

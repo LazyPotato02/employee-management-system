@@ -62,8 +62,11 @@
                         </ul>
                     </li>
                 </ul>
-                <a class="nav-item nav-link" style="color: gray" href="{% url 'logout' %}">Logout</a>
+                <a class="nav-item nav-link" style="color: #8a8686" href="{% url 'edit user' pk=request.user.id %}">{{ user.username }}</a>
+
+                <a class="nav-item nav-link" style="color: #8a8686" href="{% url 'logout' %}">Logout</a>
             </div>
+
         {% else %}
             <div>
                 <a class="nav-item nav-link" style="color: gray; :" href="{% url 'login' %}">Login</a></div>

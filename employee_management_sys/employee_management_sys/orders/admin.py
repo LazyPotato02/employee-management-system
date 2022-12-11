@@ -1,9 +1,12 @@
 from django.contrib import admin
 
+from employee_management_sys.orders.models import Order
+
+
 # Register your models here.
-from employee_management_sys.employees.models import Employee
 
 
-@admin.register(Employee)
-class EmployeeAdmin(admin.ModelAdmin):
+@admin.register(Order)
+class OrdersAdmin(admin.ModelAdmin):
     pass
+

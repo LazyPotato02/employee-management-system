@@ -1,7 +1,9 @@
 from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.models import Group
+from django.contrib.auth.views import LoginView
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # Create your views here.
 from django.urls import reverse_lazy
@@ -48,18 +50,24 @@ class UserCreateView(views.CreateView):
             return HttpResponseRedirect(redirect_to)
         return super().dispatch(request, *args, **kwargs)
     # TODO:
-    # def post(self, request, *args, **kwargs):
-    #     pass
-    #     form = CustomUserCreationForm(request.POST)
-    #     if form.is_valid():
-    #         user = form.save(commit=False)
-    #
-    #         user.save()
-    #
-    #         user_group = Group.objects.get(name='Bronze')
-    #
-    #         user.groups.add(user_group)
-    #
-    #         return redirect('login')
-    #     else:
-    #         return render(request, self.template_name, {'form': form})
+    def post(self, request, *args, **kwargs):
+        pass
+        form = UserCreateForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+
+            user.save()
+
+            user_group = Group.objects.get(name='Viewer')
+
+            user.groups.add(user_group)
+
+            return redirect('login')
+        else:
+            return render(request, self.template_name, {'form': form})
+
+class UserLoginView(LoginView):
+    template_name = 'login.html'
+    success_url = reverse_lazy('index')
+    redirect_authenticated_user = True
+    name = 'login'

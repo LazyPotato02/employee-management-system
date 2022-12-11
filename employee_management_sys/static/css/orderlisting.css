@@ -1,0 +1,31 @@
+.order-list{
+    border-color: black;
+    border-style: solid;
+    border-radius: 15px;
+    width: 30%;
+    text-align: center;
+    height: 22%;
+    margin: 10px ;
+    float: left;;
+
+
+}
+.order-lister-ul{
+    position: absolute;
+    left: 13%;
+}
+
+#id_is_done{
+    height: 30px;
+    width: 30px;
+}
+.order-list a{
+    color: black;
+    text-decoration: underline;
+    font-size: 50px
+}
+.ord-not-found{
+    font-size: 100px;
+    text-align:center;
+
+}

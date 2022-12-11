@@ -25,7 +25,7 @@ class UserCreateForm(auth_forms.UserCreationForm):
     password1 = forms.CharField(
         label='Password', widget=forms.PasswordInput())
     password2 = forms.CharField(
-        label='Confirm Password(again)', widget=forms.PasswordInput())
+        label='Confirm Password', widget=forms.PasswordInput())
 
     class Meta:
         model = UserModel

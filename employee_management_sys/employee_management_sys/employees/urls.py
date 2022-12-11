@@ -10,4 +10,3 @@ urlpatterns = [
     path('delete/<int:pk>', EmployeeDeleteView.as_view(), name='employee delete'),
 ]
 
-# TODO: Create SignUp for employees to track their month progression

@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   web:
-    build: ./emp_system
+    build: ./employee_management_sys
     command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./employee_management_sys/:/usr/src/app/

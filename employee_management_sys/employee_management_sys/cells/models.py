@@ -4,6 +4,9 @@ from django.db import models
 
 
 class Cells(models.Model):
+    class Meta:
+        ordering = ['cell_name']
+
     cell_name = models.CharField(max_length=25,unique=True)
 
     def __repr__(self):

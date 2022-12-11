@@ -8,5 +8,5 @@ from employee_management_sys.orders.models import Order
 
 @admin.register(Order)
 class OrdersAdmin(admin.ModelAdmin):
-    pass
-
+    list_display = ("name","quantity",'is_done')
+    list_filter = ('is_done',)

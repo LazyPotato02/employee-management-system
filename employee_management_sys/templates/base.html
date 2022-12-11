@@ -61,6 +61,18 @@
                         </ul>
                     </li>
                 </ul>
+                 <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Materials
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{% url 'material add' %}">Add</a></li>
+                            <li><a class="dropdown-item" href="{% url 'material list' %}">List</a></li>
+                        </ul>
+                    </li>
+                </ul>
                 <a class="nav-item nav-link" style="color: #8a8686" href="{% url 'edit user' pk=request.user.id %}">{{ user.username }}</a>
 
                 <a class="nav-item nav-link" style="color: #8a8686" href="{% url 'logout' %}">Logout</a>

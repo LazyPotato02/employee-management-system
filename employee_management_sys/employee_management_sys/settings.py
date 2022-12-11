@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import environ
 
@@ -29,6 +30,7 @@ INSTALLED_APPS = [
     'employee_management_sys.cells',
     'employee_management_sys.employees',
     'employee_management_sys.orders',
+    'employee_management_sys.materials',
 
 ]
 

@@ -8,7 +8,7 @@ from employee_management_sys.cells.models import Cells
 
 class Employee(models.Model):
     class Meta:
-        ordering = ('pk',)
+        ordering = ('first_name',)
 
     C01 = "C01"
     C02 = "C02"

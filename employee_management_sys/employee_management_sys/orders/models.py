@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.1/topics/db/examples/one_to_one/
 '''
 
 class Order(models.Model):
+    class Meta:
+        ordering = ['name']
     name = models.CharField(
         max_length=255,
     )

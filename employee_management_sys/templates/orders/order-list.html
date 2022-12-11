@@ -9,13 +9,13 @@
                     <a href="{% url 'order edit' pk=order.pk %}">
                         {{ order.name }}</a>
                     {% if order.cell %}
-                        <h1>Cell: <b style="color: lawngreen">{{ order.cell }}</b></h1>
+                        <h1>Cell: <b style="color: #2ec12e">{{ order.cell }}</b></h1>
 
                     {% else %}
                         <h1>Cell: <b style="color: red">{{ order.cell }}</b></h1>
                     {% endif %}
                     {% if order.is_done %}
-                        <h1>Done: <b style="color: lawngreen">{{ order.is_done }}</b></h1>
+                        <h1>Done: <b style="color: #2ec12e">{{ order.is_done }}</b></h1>
                     {% else %}
                         <h1>Done: <b style="color: red">{{ order.is_done }}</b></h1>
                     {% endif %}

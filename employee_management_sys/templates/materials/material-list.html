@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Material Listing{% endblock %}
+{% block content %}
+
+    {% if materials_list %}
+        <div class="material-lister-ul">
+            {% for material in materials_list %}
+                <div class="material-list">
+                    <a href="{% url 'material edit' pk=material.id %}">
+                        {{ material.name }}
+                    </a>
+                    <h1>Quantity: <b style="color: #2ec12e">{{ material.quantity }}</b></h1>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h1 class="mat-not-found">No materials found</h1>
+    {% endif %}
+{% endblock %}

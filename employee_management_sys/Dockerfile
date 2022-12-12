@@ -1,15 +1,25 @@
-FROM python:3
+FROM python:3.10
 
-# set work directory
-WORKDIR /usr/src/app
+RUN apt update -y \
+    && apt upgrade -y
 
-# set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# install dependencies
+ENV HOME=/home/app
+ENV APP_HOME=/home/app/web
+
+#ENV STATICFILES_HOME=/tmp/staticfiles
+
+#RUN mkdir -p $STATICFILES_HOME
+
+# WORKDIR is as `cd` + `mkdir`
+WORKDIR $APP_HOME
+
 RUN pip install --upgrade pip
+
 COPY ./requirements.txt .
+
 RUN pip install -r requirements.txt
-# copy project
+
 COPY . .

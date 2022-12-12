@@ -9,18 +9,18 @@ services:
     ports:
       - 8000:8000
     env_file:
-      - ./employee_management_sys/.env
+      - ./employee_management_sys/employee_management_sys/.env
     depends_on:
       - postgres
-  postgres:
-    image: postgres
+  postgres:    
+    image: postgres:latest
     restart: always
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_PASSWORD:
-      POSTGRES_USER:
-      POSTGRES_DB: employee_management
-      PGDATA: /var/lib/employee_management/data/pgdata
+      POSTGRES_PASSWORD: 
+      POSTGRES_USER: 
+      POSTGRES_DB: 
+      PGDATA: /var/lib/postgresql/data/pgdata
     volumes:
-      - ./employee_management/:/var/lib/employee_management/data
+      - ./postgresql:/var/lib/postgresql/data

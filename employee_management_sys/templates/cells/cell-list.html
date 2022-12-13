@@ -5,7 +5,7 @@
         <div style="margin-left: 100px">
 
         {% for cell in cells_list %}
-            <div class="employee-list">
+            <div class="cell-list">
                 <a href="{% url 'cell manage' pk=cell.pk %}"
                    style="text-decoration: underline;font-size: 40px">
                     {{ cell.cell_name }} </a>

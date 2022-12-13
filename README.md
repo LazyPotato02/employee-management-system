@@ -1,9 +1,17 @@
 # softuni-final-project
 
+RUN IN PRODUCTION STATE
+- docker-compose -f docker-compose.prod.yml up -d --build
+- docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+- docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
+
+RUN IN DEVELOPMENT STATE:
 - docker compose up -d
 - docker-compose exec web python manage.py migrate
 - docker-compose exec web python manage.py createsuperuser
 
+
+Setting up groups for properly user experience
 ```
 To make the app function properly you need to log into the admin panel and add 2 groups viewer and editor:
 
@@ -27,4 +35,10 @@ To make the app function properly you need to log into the admin panel and add 2
     
 TO MAKE THE APP FUNCTION PROPERLY YOU NEED TO LOG INTO THE ADMIN PANEL
 ```
-    
+
+REBUILDING DOCKER:
+docker-compose down -v
+
+docker-compose -f docker-compose.prod.yml up -d --build
+docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear

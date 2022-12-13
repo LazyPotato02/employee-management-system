@@ -2,9 +2,9 @@
     border-color: black;
     border-style: solid;
     border-radius: 15px;
-    width: 100%;
+    /*width: 100%;*/
     text-align: center;
-    height: 22%;
+    /*height: 22%;*/
     margin: 10px ;
     float: left;;
 
@@ -12,7 +12,9 @@
 }
 .order-lister-ul{
     position: absolute;
-    left: 10%;
+    left: 7%;
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
 }
 
 #id_is_done{

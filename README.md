@@ -33,7 +33,6 @@ To make the app function properly you need to log into the admin panel and add 2
 
 
     
-TO MAKE THE APP FUNCTION PROPERLY YOU NEED TO LOG INTO THE ADMIN PANEL
 ```
 
 REBUILDING DOCKER:

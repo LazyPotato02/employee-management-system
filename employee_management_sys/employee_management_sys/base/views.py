@@ -70,3 +70,7 @@ class UserLoginView(LoginView):
     success_url = reverse_lazy('index')
     redirect_authenticated_user = True
     name = 'login'
+
+
+def error_404_view(request, exception):
+    return render(request, '404.html')

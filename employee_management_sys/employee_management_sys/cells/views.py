@@ -14,7 +14,7 @@ class CellCreateView(LoginRequiredMixin, views.CreateView):
     template_name = 'cells/cell-create.html'
     model = Cells
     fields = '__all__'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('cell list')
 
 
 class CellDeleteView(LoginRequiredMixin, views.DeleteView):
@@ -23,7 +23,7 @@ class CellDeleteView(LoginRequiredMixin, views.DeleteView):
     template_name = 'cells/cell-delete.html'
     model = Cells
     fields = '__all__'
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('cell list')
 
 
 class CellDisplayView(LoginRequiredMixin, views.ListView):

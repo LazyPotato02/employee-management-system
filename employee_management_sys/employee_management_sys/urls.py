@@ -9,3 +9,5 @@ urlpatterns = [
     path('orders/',include('employee_management_sys.orders.urls')),
     path('material/',include('employee_management_sys.materials.urls')),
 ]
+handler404 = 'employee_management_sys.base.views.error_404_view'
+handler505 = 'employee_management_sys.base.views.error_404_view'

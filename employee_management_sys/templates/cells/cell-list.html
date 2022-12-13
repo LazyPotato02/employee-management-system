@@ -2,8 +2,8 @@
 {% block title %}Employee Listing{% endblock %}
 {% block content %}
     {% if cells_list %}
-        <div style="margin-left: 100px">
-
+{#        <div style="margin-left: 100px">#}
+        <div class="cell-ul">
         {% for cell in cells_list %}
             <div class="cell-list">
                 <a href="{% url 'cell manage' pk=cell.pk %}"

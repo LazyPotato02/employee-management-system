@@ -4,13 +4,23 @@
     border-bottom-width: 1 vm;
     border-radius: 15px;
     text-align: center;
-    width: 40%;
-    margin: 20px;
+    /*width: 40%;*/
+    margin: 3px;
 }
 
-.cell-ul ul {
+.cell-ul {
+    position: absolute;
+    left: 6%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 500px 500px 500px;
+
+}
+
+.cell-ul ul{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 500px 500px 500px;
+
 }
 
 .cell-list a {

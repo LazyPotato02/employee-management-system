@@ -63,7 +63,8 @@ class Employee(models.Model):
         # em_id = str(self.id)
         # cell_id = Cells.objects.get(id=self.id)
         # em_cell_str = Employee.objects.filter(id=10)
-        return f"{self.first_name} {self.last_name} - {self.cell.get()}"
+        # return f"{self.first_name} {self.last_name} - {self.cell.get()}"
+        return f"{self.cell.get()}"
 
         # return str(self.cell.get())
 

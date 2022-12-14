@@ -3,19 +3,27 @@
     border-style: solid;
     border-bottom-width: 1vm;
     border-radius: 15px;
-    /*width: 100%;*/
+    /*width: 30fr;*/
     text-align: center;
-    /*height: 22%;*/
-    margin: 10px ;
+    /*height: 22fr;*/
+    margin: 0.1% ;
     float: left;
 
 
 }
 .employee-lister-ul{
-    position: absolute;
-    left: 6%;
     display: grid;
-    grid-template-columns: 500px 500px 500px;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, 340px);
+    grid-template-rows: repeat(2, 200px);
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0.2%;
+    /*position: absolute;*/
+    /*left: 1%;*/
+    /*display: grid;*/
+    /*width: auto;*/
+    /*grid-template-columns: 500px 500px;*/
 }
 .employee-list a{
     color: black;

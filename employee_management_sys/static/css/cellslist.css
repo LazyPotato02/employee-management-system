@@ -9,10 +9,17 @@
 }
 
 .cell-ul {
-    position: absolute;
-    left: 6%;
+    /*position: absolute;*/
+    /*left: 6%;*/
+    /*display: grid;*/
+    /*grid-template-columns: 500px 500px 500px;*/
     display: grid;
-    grid-template-columns: 500px 500px 500px;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat(2, 80px);
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 0.2%;
 
 }
 

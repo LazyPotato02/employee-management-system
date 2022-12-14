@@ -1,0 +1,60 @@
+#id_name {
+    border-color: black;
+    width: 60%;
+}
+
+#id_quantity {
+    border-color: black;
+    width: 60%;
+
+}
+
+#id_cell {
+    border-color: black;
+    width: 60%;
+}
+
+#id_first_name {
+    border-color: black;
+    width: 60%;
+}
+
+#id_last_name {
+    border-color: black;
+    width: 60%;
+}
+
+#id_emp_id {
+    border-color: black;
+    width: 60%;
+}
+
+#id_cell_name {
+    border-color: black;
+    width: 60%;
+}
+
+#id_username {
+    border-color: black;
+    width: 60%;
+}
+
+#id_password {
+    width: 60%;
+    border-color: black;
+}
+
+#id_email {
+    border-color: black;
+    width: 60%;
+}
+
+#id_password1 {
+    border-color: black;
+    width: 60%;
+}
+
+#id_password2 {
+    border-color: black;
+    width: 60%;
+}

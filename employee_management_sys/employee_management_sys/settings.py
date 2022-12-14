@@ -17,7 +17,9 @@ DEBUG = True
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1']
 else:
-    ALLOWED_HOSTS = ['homeserver3995.tplinkdns.com']
+    ALLOWED_HOSTS = ['127.0.0.1']
+
+    # ALLOWED_HOSTS = ['homeserver3995.tplinkdns.com']
 
 # Application definition
 

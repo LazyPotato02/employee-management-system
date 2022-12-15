@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load is_group %}
 {% block title %}Cell Management{% endblock %}
 {% block content %}
     <div style="text-align: center;color: #6dd317">
@@ -17,8 +18,13 @@
                 {% for emp in employee %}
                     <li>
                         <div class="cell-list">
-                            <a href="{% url 'employee edit' pk=emp.id %}">{{ emp.first_name }} {{ emp.last_name }}</a>
-                            <h1 style="color: red"><b style="color: black">EMP ID:</b> {{ emp.emp_id }}</h1>
+                            {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                                <a href="{% url 'employee edit' pk=emp.id %}">{{ emp.first_name }} {{ emp.last_name }}</a>
+                                <h1 style="color: red"><b style="color: black">EMP ID:</b> {{ emp.emp_id }}</h1>
+                            {% else %}
+                                <h1>{{ emp.first_name }} {{ emp.last_name }}</h1>
+                                <h1 style="color: red"><b style="color: black">EMP ID:</b> {{ emp.emp_id }}</h1>
+                            {% endif %}
                         </div>
                     </li>
                 {% endfor %}

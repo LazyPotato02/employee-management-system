@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load is_group %}
 {% block title %}Material Listing{% endblock %}
 {% block content %}
 
@@ -6,10 +7,16 @@
         <div class="material-lister-ul">
             {% for material in materials_list %}
                 <div class="material-list">
-                    <a href="{% url 'material edit' pk=material.id %}">
-                        {{ material.name }}
-                    </a>
-                    <h1>Quantity: <b style="color: #2ec12e">{{ material.quantity }}</b></h1>
+                    {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+
+                        <a href="{% url 'material edit' pk=material.id %}">
+                            {{ material.name }}
+                        </a>
+                        <h1>Quantity: <b style="color: #2ec12e">{{ material.quantity }}</b></h1>
+                    {% else %}
+                        <h1 style="font-size: 40px">{{ material.name }}</h1>
+                        <h1>Quantity: <b style="color: #2ec12e">{{ material.quantity }}</b></h1>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>

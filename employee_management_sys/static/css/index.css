@@ -1,12 +1,12 @@
 .index-test {
     text-align: center;
-    margin-top: 1%;
+    margin-top: 5%;
     font-family: Monospace;
     /*position: absolute;*/
     /*top: 25%;*/
-    width: 90%;
+    width: 80%;
     /*left: 5%;*/
-    margin-left: 5%;
+    margin-left: 10%;
     border-color: red;
     border-style: solid;
     border-radius: 10px;

@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load is_group %}
 {% block title %}Order Listing{% endblock %}
 {% block content %}
 
@@ -6,8 +7,13 @@
         <div class="order-lister-ul">
             {% for order in order_list %}
                 <div class="order-list">
-                    <a href="{% url 'order edit' pk=order.pk %}">
-                        {{ order.name }}</a>
+                    {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+
+                        <a href="{% url 'order edit' pk=order.pk %}">
+                            {{ order.name }}</a>
+                    {% else %}
+                        <h1>{{ order.name }}</h1>
+                    {% endif %}
                     {% if order.cell %}
                         <h1>Cell: <b style="color: #2ec12e">{{ order.cell }}</b></h1>
 

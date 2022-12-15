@@ -1,0 +1,32 @@
+.information {
+    animation-name: ex;
+    animation: ex 7s infinite;
+    border-color: red;
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 5%;
+    font-size: 36px;
+    width: 50%;
+    margin-left: 25%;
+
+}
+
+.information h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+@keyframes ex {
+    0% {
+        border-color: darkslategray;
+    }
+    25% {
+        border-color: midnightblue;
+    }
+    50% {
+        border-color: blue;
+    }
+    100% {
+        border-color: gray;
+    }
+}

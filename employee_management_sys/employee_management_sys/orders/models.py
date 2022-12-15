@@ -4,9 +4,6 @@ from django.core import validators
 from employee_management_sys.cells.models import Cells
 
 # Create your models here.
-'''
-https://docs.djangoproject.com/en/4.1/topics/db/examples/one_to_one/
-'''
 
 class Order(models.Model):
     class Meta:

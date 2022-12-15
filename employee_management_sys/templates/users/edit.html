@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-{% block title %} Employee Edit{% endblock %}
+{% extends 'base/base.html' %}
+{% block title %} User Edit{% endblock %}
 {% block content %}
     <form method="post" action="{% url 'edit user' pk=request.user.pk %}">
         <div class="center-form-div">

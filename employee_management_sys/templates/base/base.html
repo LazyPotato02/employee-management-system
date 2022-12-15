@@ -20,11 +20,13 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+        <a class="navbar-brand" href="{% url 'index' %}">EMP</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown"
                 aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+        <a class="nav-link" id="navbarDarkDropdownMenuLink" style="color: #8a8686" href="{% url 'about' %}">About</a>
+
         {% if request.user.is_authenticated %}
             <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                 <ul class="navbar-nav">
@@ -90,17 +92,22 @@
             </div>
 
         {% else %}
-            <div>
-                <a class="nav-item nav-link" style="color: gray; :" href="{% url 'login' %}">Login</a></div>
-            <div>
+            <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                <a class="nav-item nav-link" style="color: gray; :" href="{% url 'login' %}">Login</a>
                 <a class="nav-item nav-link" style="color: gray" href="{% url 'sign-up' %}">Sign-Up</a>
             </div>
+
         {% endif %}
 
     </div>
 </nav>
 {% block content %}
-    <h1 style="text-align: center">Home Page</h1>
+    <div class="index-test">
+        <h1>Welcome to Employee Management System made as final project at <a href="https://softuni.bg/">softuni.bg</a>!
+        </h1>
+    </div>
+
+
 {% endblock %}
 
 </body>

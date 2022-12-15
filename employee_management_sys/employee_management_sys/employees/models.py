@@ -42,13 +42,7 @@ class Employee(models.Model):
         blank=False,
         null=False,
     )
-    # cell = models.CharField(
-    #     max_length=50,
-    #     choices=CELLS,
-    #     blank=True,
-    #     null=False,
-    #     default='Not Assigned'
-    # )
+
     cell = models.ManyToManyField(Cells)
     emp_id = models.CharField(
         max_length=7,
@@ -60,15 +54,4 @@ class Employee(models.Model):
         return str(self.cell.get())
 
     def __str__(self):
-        # em_id = str(self.id)
-        # cell_id = Cells.objects.get(id=self.id)
-        # em_cell_str = Employee.objects.filter(id=10)
-        # return f"{self.first_name} {self.last_name} - {self.cell.get()}"
         return f"{self.cell.get()}"
-
-        # return str(self.cell.get())
-
-    # def save(self, *args, **kwargs):
-    #     if self.cell == '':
-    #         self.cell = 'Not Assigned'
-    #     super(Employee, self).save(*args, **kwargs)

@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base/base.html' %}
 {% block title %}Order Deletion{% endblock %}
 {% block content %}
     <form method="post" action="{% url 'order delete'  pk=order.pk %}">

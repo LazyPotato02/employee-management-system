@@ -12,7 +12,7 @@ from employee_management_sys.employees.models import Employee
 class CellCreateView(LoginRequiredMixin, views.CreateView):
     form_class = CellForm
     login_url = reverse_lazy('login')
-    redirect_field_name = reverse_lazy('index')
+    redirect_field_name = reverse_lazy('cell list')
     template_name = 'cells/cell-create.html'
     model = Cells
     # fields = '__all__'
@@ -21,7 +21,7 @@ class CellCreateView(LoginRequiredMixin, views.CreateView):
 
 class CellDeleteView(LoginRequiredMixin, views.DeleteView):
     login_url = reverse_lazy('login')
-    redirect_field_name = reverse_lazy('index')
+    redirect_field_name = reverse_lazy('cell list')
     template_name = 'cells/cell-delete.html'
     model = Cells
     fields = '__all__'
@@ -30,17 +30,16 @@ class CellDeleteView(LoginRequiredMixin, views.DeleteView):
 
 class CellDisplayView(LoginRequiredMixin, views.ListView):
     login_url = reverse_lazy('login')
-    redirect_field_name = reverse_lazy('index')
+    redirect_field_name = reverse_lazy('cell list')
     model = Cells
     template_name = 'cells/cell-list.html'
 
 
 class CellManageView(LoginRequiredMixin, views.DetailView):
     login_url = reverse_lazy('login')
-    redirect_field_name = reverse_lazy('index')
+    redirect_field_name = reverse_lazy('cell list')
     model = Cells
     template_name = 'cells/cells-manage.html'
-
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -50,9 +49,8 @@ class CellManageView(LoginRequiredMixin, views.DetailView):
 
 class CellEditView(LoginRequiredMixin, views.UpdateView):
     login_url = reverse_lazy('login')
-    redirect_field_name = reverse_lazy('index')
+    redirect_field_name = reverse_lazy('cell list')
     model = Cells
     template_name = 'cells/cells-edit.html'
     success_url = reverse_lazy('cell list')
     fields = '__all__'
-

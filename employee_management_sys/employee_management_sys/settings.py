@@ -5,21 +5,17 @@ import environ
 from django.urls import reverse_lazy
 env = environ.Env()
 environ.Env.read_env()
-# reading .env file
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env("SECRET_KEY")
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1']
 else:
-    ALLOWED_HOSTS = ['127.0.0.1']
+    # ALLOWED_HOSTS = ['127.0.0.1']
 
-    # ALLOWED_HOSTS = ['homeserver3995.tplinkdns.com']
+    ALLOWED_HOSTS = ['homeserver3995.tplinkdns.com']
 
 # Application definition
 
@@ -103,14 +99,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# CACHES = {
-#   'default': {
-#     'BACKEND':
-#       'django.core.cache.backends.redis.RedisCache',
-#     'LOCATION':
-#       'redis://127.0.0.1:6379',
-#   }
-# }
 
 
 # Internationalization
@@ -130,11 +118,8 @@ USE_TZ = True
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / "staticfiles"
-# MEDIA_URL = '/media/'
-# MEDIA_ROOT = BASE_DIR / 'mediafiles'
+
 AUTH_USER_MODEL = 'base.EmployeeManager'
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 LOGIN_REDIRECT_URL = reverse_lazy('index')
 LOGOUT_REDIRECT_URL = reverse_lazy('index')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

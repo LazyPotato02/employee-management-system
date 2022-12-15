@@ -35,9 +35,6 @@ class UserCreateForm(auth_forms.UserCreationForm):
         }
         help_texts = {
             'username': None,
-            #     'email': None,
-            #     'password1': None,
-            #     'password2': None,
         }
 
 

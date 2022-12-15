@@ -22,7 +22,6 @@ class EmployeeManager(auth_models.AbstractUser):
         null=True,
         blank=True
 
-
     )
 
     last_name = models.CharField(

@@ -1,0 +1,30 @@
+.index-test {
+    text-align: center;
+    margin-top: 1%;
+    font-family: Monospace;
+    /*position: absolute;*/
+    /*top: 25%;*/
+    width: 90%;
+    /*left: 5%;*/
+    margin-left: 5%;
+    border-color: red;
+    border-style: solid;
+    border-radius: 10px;
+    animation-name: ex;
+    animation: ex 7s infinite;
+}
+
+@keyframes ex {
+    0% {
+        border-color: darkslategray;
+    }
+    25% {
+        border-color: midnightblue;
+    }
+    50% {
+        border-color: blue;
+    }
+    100% {
+        border-color: gray;
+    }
+}

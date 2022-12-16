@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic as view
+from django.views.decorators.csrf import csrf_protect
 
 from employee_management_sys.orders.forms import OrderForm
 from employee_management_sys.orders.models import Order

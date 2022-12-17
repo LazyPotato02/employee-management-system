@@ -1,45 +1,47 @@
-# softuni-final-project
 
-RUN IN PRODUCTION STATE
-- docker-compose -f docker-compose.prod.yml up -d --build
-- docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
-- docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
-- docker-compose exec web python manage.py createsuperuser
-- 
-
-RUN IN DEVELOPMENT STATE:
-- docker compose up -d
-- docker-compose exec web python manage.py migrate
-- docker-compose exec web python manage.py createsuperuser
+# Employee Management System
 
 
-Setting up groups for properly user experience
+
+
+## Demo
+
+[Deployed demo](http://homeserver3995.tplinkdns.com/)
+
+
+## Deployment
+
+
+
+> Edit .env file and settings.py to match you credentials
+**You can edit the database credentials in the docker-compose files**
+
+**Step - 1** 
+```bash
+  docker-compose -f docker-compose.prod.yml up -d --build
 ```
-To make the app function properly you need to log into the admin panel and add 2 groups viewer and editor:
+**Step - 2** 
 
-    STEP #1: Set up groups and permissions 
-        
-    Log into django admin panel with the admin credentials and create 2 groups:
+```bash
+  docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
+```
+**Step - 3** 
 
-        - Editor:
-            should have all permissions for cells,employees,materials,orders
-        - Viewer:
-            should have only Can view permission for cells,employees,materials,orders
+```bash
+  docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
+```
+**Step - 4** 
+* You will be propted to enter first superuser account credentials
 
-
-    - EVERY NEW USER HAS Viewer GROUP(If you want a user with Viewer group to log in into the admin panel
-    you need to give him the staff status with the superuser account you created first)
-        -You can do this step for the Editor group too
-
-    
-
-
-    
+```bash
+  docker-compose exec web python manage.py createsuperuser
 ```
 
-REBUILDING DOCKER:
-docker-compose -f docker-compose.prod.yml down -v
+**Deleting**
+```bash
+  docker-compose -f docker-compose.prod.yml down -v
+```
+## License
 
-docker-compose -f docker-compose.prod.yml up -d --build
-docker-compose -f docker-compose.prod.yml exec web python manage.py migrate --noinput
-docker-compose -f docker-compose.prod.yml exec web python manage.py collectstatic --no-input --clear
+[MIT](https://choosealicense.com/licenses/mit/)
+

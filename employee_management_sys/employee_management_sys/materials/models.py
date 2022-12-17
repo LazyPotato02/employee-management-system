@@ -7,5 +7,6 @@ class Materials(models.Model):
         ordering = ['name']
     name = models.CharField(
         max_length=255,
+        unique=True,
     )
     quantity = models.PositiveIntegerField()

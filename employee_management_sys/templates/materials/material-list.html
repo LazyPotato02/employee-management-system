@@ -7,8 +7,13 @@
         <div class="material-lister-ul">
             {% for material in materials_list %}
                 <div class="material-list">
-                    {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                    {% if request.user|is_group:'Editor' %}
 
+                        <a href="{% url 'material edit' pk=material.id %}">
+                            {{ material.name }}
+                        </a>
+                        <h1>Quantity: <b style="color: #2ec12e">{{ material.quantity }}</b></h1>
+                    {% elif request.user.is_superuser %}
                         <a href="{% url 'material edit' pk=material.id %}">
                             {{ material.name }}
                         </a>

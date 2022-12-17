@@ -37,7 +37,9 @@
                             Employees
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                            {% if request.user|is_group:'Editor' %}
+                                <li><a class="dropdown-item" href="{% url 'employee creation' %}">Add</a></li>
+                            {% elif request.user.is_superuser %}
                                 <li><a class="dropdown-item" href="{% url 'employee creation' %}">Add</a></li>
                             {% endif %}
                             <li><a class="dropdown-item" href="{% url 'employee list' %}">List</a></li>
@@ -51,8 +53,11 @@
                             Orders
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                            {% if request.user|is_group:'Editor' %}
                                 <li><a class="dropdown-item" href="{% url 'order add' %}">Add</a></li>
+                            {% elif request.user.is_superuser %}
+                                <li><a class="dropdown-item" href="{% url 'order add' %}">Add</a></li>
+
                             {% endif %}
                             <li><a class="dropdown-item" href="{% url 'order list' %}">List</a></li>
                         </ul>
@@ -65,8 +70,12 @@
                             Cells
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                            {% if request.user|is_group:'Editor' %}
                                 <li><a class="dropdown-item" href="{% url 'cell creation' %}">Add</a></li>
+
+                            {% elif request.user.is_superuser %}
+                                <li><a class="dropdown-item" href="{% url 'cell creation' %}">Add</a></li>
+
                             {% endif %}
                             <li><a class="dropdown-item" href="{% url 'cell list' %}">List</a></li>
                         </ul>
@@ -79,9 +88,12 @@
                             Materials
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                            {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                            {% if request.user|is_group:'Editor' %}
+                                <li><a class="dropdown-item" href="{% url 'material add' %}">Add</a></li>
+                            {% elif request.user.is_superuser %}
                                 <li><a class="dropdown-item" href="{% url 'material add' %}">Add</a></li>
                             {% endif %}
+
                             <li><a class="dropdown-item" href="{% url 'material list' %}">List</a></li>
                         </ul>
                     </li>

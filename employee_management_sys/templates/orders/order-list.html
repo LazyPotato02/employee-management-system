@@ -7,10 +7,14 @@
         <div class="order-lister-ul">
             {% for order in order_list %}
                 <div class="order-list">
-                    {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                    {% if request.user|is_group:'Editor' %}
 
                         <a href="{% url 'order edit' pk=order.pk %}">
                             {{ order.name }}</a>
+                    {% elif request.user.is_superuser %}
+                        <a href="{% url 'order edit' pk=order.pk %}">
+                            {{ order.name }}</a>
+
                     {% else %}
                         <h1>{{ order.name }}</h1>
                     {% endif %}

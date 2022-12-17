@@ -6,7 +6,12 @@
         <div class="employee-lister-ul">
             {% for employee in employee_list %}
                 <div class="employee-list">
-                    {% if request.user|is_group:'Editor' or request.user.is_superuser %}
+                    {% if request.user|is_group:'Editor' %}
+                        <a href="{% url 'employee edit' pk=employee.pk %}">
+                            {{ employee.first_name }} {{ employee.last_name }}</a>
+                        <h1>{{ employee }}</h1>
+                        <h1 style="color: red"><b style="color: black">EMP ID:</b> {{ employee.emp_id }}</h1>
+                    {% elif request.user.is_superuser %}
                         <a href="{% url 'employee edit' pk=employee.pk %}">
                             {{ employee.first_name }} {{ employee.last_name }}</a>
                         <h1>{{ employee }}</h1>

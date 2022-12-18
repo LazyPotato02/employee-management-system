@@ -4,11 +4,6 @@
 
 
 
-## Demo
-
-[Deployed demo](http://homeserver3995.tplinkdns.com/)
-
-
 ## Deployment
 
 

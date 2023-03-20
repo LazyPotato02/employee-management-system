@@ -31,7 +31,7 @@
 ```bash
   docker-compose exec web python manage.py createsuperuser
 ```
-**Step - 5 !IMPORTANT ** 
+**Step - 5 !IMPORTANT** 
 
 * You need to log into {ip}/admin and create 2 groups Editor and Viewer
 * 

@@ -34,7 +34,7 @@
 **Step - 5 !IMPORTANT** 
 
 * You need to log into {ip}/admin and create 2 groups Editor and Viewer
-* 
+
 * Editor group should have all permissions for cells,employees,materials and orders
 * Viewer group should have only view permissions for cells,employees,materials and orders
 
